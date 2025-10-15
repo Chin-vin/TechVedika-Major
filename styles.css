@@ -1,0 +1,493 @@
+body {
+  padding-top: 70px; /* keeps content visible, navbar stays fixed at 0 */
+}
+.hero{
+  height: 60vh;
+}
+
+.te{
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
+
+.animated-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s ease forwards;
+}
+
+/* Animation for sliding up */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay each word */
+.animated-text span:nth-child(1) { animation-delay: 0.1s; }
+.animated-text span:nth-child(2) { animation-delay: 0.3s; }
+.animated-text span:nth-child(3) { animation-delay: 0.5s; }
+.animated-text span:nth-child(4) { animation-delay: 0.7s; }
+.animated-text span:nth-child(5) { animation-delay: 0.9s; }
+.animated-text span:nth-child(6) { animation-delay: 1.1s; }
+.animated-text span:nth-child(7) { animation-delay: 1.3s; }
+
+.ele{
+    display:inline-block;
+    color: black;
+  text-decoration: none; /* Remove default underline */
+  transition: transform 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for movement and underline */
+}
+    
+.underline_animation{
+  position:relative;
+
+}
+.underline_animation::after{
+  content: '';
+  position: absolute;
+  width:0;
+  height:1px;
+    display: block;
+    margin-top: 1px;
+  left:0;
+  background-color: grey;
+  bottom: 0;
+  transition: width 0.3s ease ;
+}
+.underline_animation:hover::after{
+  width:100%;
+}
+
+.ele:hover{
+  text-decoration: underline;
+  text-decoration-color: greenyellow;
+  text-decoration-thickness: 2px;
+  transform: translateY(-10px);
+
+}
+.crd:hover{
+    display: inline-block;
+    transform:translateY(-10px);
+    transition:transform 0.3s ease ;
+}
+
+.slideUp:hover{
+ /* display: inline; */
+ background-color: white;
+transform:translateY(-4px);
+    transition:transform 0.3s ease ;
+}
+.sep{
+    height:100vh;
+   font-family: "Alan Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700px;
+    padding:10vh 15vh;
+  color:white;
+  background-color: black;
+  text-align: center;
+  align-items: center;
+  margin:3vh;
+}
+input{
+    padding-left: 20px;
+    
+    
+}
+.subscribe{
+  height:60vh;
+  padding:3vw 3vw;
+}
+input.format::placeholder{
+    color: rgb(110, 97, 97);
+    opacity: 1;
+}
+textarea.format::placeholder{
+   color: rgb(110, 97, 97);
+    opacity: 1;
+}
+input.format:focus,
+input.format:active
+{
+  background-color: black;
+  border: 2px solid lightgreen !important;
+  outline: none; /* optional, removes blue default outline */
+}
+
+
+.format{
+   background-color: black;
+    border:1px solid rgb(133, 124, 124);
+    color:lightgrey;
+    width:auto;
+}
+.another-container{
+  background-color: black;
+  color:white;
+  /* padding:15px; */
+}
+.footer{
+  background-color: black;
+  height:auto;
+  width:100%;
+}
+.grey-color{
+  color:grey;
+}
+
+.circle{
+  width: 20vw;
+  height:20vw;
+  border-radius: 50%;
+  background-color: lightgreen;
+  z-index:-1;
+  position: relative;
+}
+
+.inner-text{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+}
+
+.sticky-bullets li::before{
+
+  content: '∗';
+
+  color:lightgreen;
+  padding-right: 5px;
+}
+/* .section{
+  position:relative;
+  overflow: visible !important;
+} */
+/* .sticky-box{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 614px; 
+} */
+.sticky-col{
+  position: sticky;
+  top: 100px; /* distance from top when scrolling */
+  align-self: flex-start;
+  flex:1;
+  /* height: fit-content; */
+}
+.ch{
+  background-color: lightgreen;
+}
+.text_on_img{
+  background: url(img_with_text.jpg) no-repeat center center;
+  background-size:cover;
+  height: 462px;
+  z-index:-1;
+  position: relative;
+  padding: 30px 20px;
+}
+.img-child{
+  position: absolute;
+  top:70px;
+  left:55px;
+
+}
+.inp-border{
+
+  background-color: black;
+    border:1px solid rgb(133, 124, 124);
+    color:lightgrey;
+    width:auto;
+}
+.manrope_text{
+    font-family: "Manrope", sans-serif;
+  font-weight: 100px;
+  font-style: normal;
+}
+.scroll-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.scroll-track {
+  display: flex;
+   align-items: flex-start;
+  width: max-content;
+  animation: scrollLoop 30s linear infinite;
+}
+
+.scroll-track img {
+  width: 300px; 
+  /* height: 200px; */
+  margin-right: 10px;
+  object-fit: contain;
+  
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.row-hover{
+  /* display: flex;
+  align-items: center; */
+
+  cursor: pointer;
+}
+
+.left-animation{
+  gap:5px;
+}
+/* Initially, only the icon is hidden and positioned slightly right */
+.special {
+  opacity: 0;
+
+  transform: translateX(10%);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Text is visible and stays in place until hover */
+.role-text {
+  opacity: 1;
+  font-size: 25px;
+  transform: translateX(0);
+  transition: transform 0.4s ease;
+}
+
+/* On hover → icon appears and both slide left */
+.row-hover:hover .special {
+  opacity: 1;
+  transform: translateX(-30%);
+}
+
+.row-hover:hover .role-text {
+  transform: translateX(-5%);
+}
+.square{
+  padding: 5px 5px;
+  border:1px solid black;
+  border-radius: 10px;
+  width:80px;
+  height:80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.lato{
+    font-family: "Lato", sans-serif;
+    color:black;
+     font-size: 15px;
+font-weight: 50px;
+
+line-height: 25.8px
+}
+input.trans-to-down:active,input.trans-to-down:focus{
+  display: inline-block;
+
+  transform:translateY(0);
+  animation: moveDown 0.3s ease 1 forwards;
+}
+textarea.trans-to-down:active,textarea.trans-to-down:focus{
+   /* display: inline-block; */
+    border:1px solid grey;
+    outline: none;
+  transform:translateY(0);
+  animation: moveDown 0.3s ease 1 forwards;
+}
+textarea.trans-to-down::placeholder{
+    color: rgb(110, 97, 97);
+    opacity: 1;
+}
+textarea.trans-to-down:focus,
+textarea.trans-to-down:active
+{
+  background-color: black;
+  border: 2px solid lightgreen ;
+  outline: none; /* optional, removes blue default outline */
+}
+.inp-border:active,.inp-border:focus{
+   border:1px solid grey;
+    outline: none;
+  transform:translateY(0%);
+  animation: moveDown 0.3s ease 1 forwards;
+}
+
+ input:invalid:not(:placeholder-shown){
+      border-color: #ff6b6b;
+      box-shadow: 0 0 0 0.2rem rgba(255,107,107,.25);
+    }
+
+    /* Optional: green border for valid input after typing */
+    input:valid:not(:placeholder-shown) {
+      border-color: #28a745;
+      box-shadow: 0 0 0 0.2rem rgba(40,167,69,.25);
+    }
+
+    .invalid-feedback {
+      display: none;
+      color: #ff6b6b;
+      font-size: 0.9rem;
+    }
+
+    input:invalid:not(:placeholder-shown) ~ .invalid-feedback{
+      display: block;
+    }
+@keyframes moveDown{
+  0%{
+
+    transform: translateY(0);
+  }
+  100%{
+
+    transform: translateY(10%);
+  }
+}
+.section_backend {
+  position: relative;
+  max-height: 1000px; /* enough scroll space */
+}
+
+.section_backend .sticky-col {
+  position: sticky;
+  top: 100px;
+  /* height: 180px; */
+    align-self: flex-start;
+  background: white;
+  z-index: 10;
+}
+
+.stacked {
+  position: relative;
+}
+
+/* Base card styling */
+.replacing {
+  position: sticky;
+  top: 5vh; /* visible area where card appears */
+  height: 50vh;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+   align-self: flex-start;
+  flex-direction: column;
+  /* justify-content: center; */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Stacking order — important! */
+.replacing:nth-child(1) { z-index: 1; }
+.replacing:nth-child(2) { z-index: 2; }
+.replacing:nth-child(3) { z-index: 3; }
+
+/* Each section triggers at different scroll points */
+.stacked .replacing:nth-child(1) {
+  top: 10vh;
+}
+
+.stacked .replacing:nth-child(2) {
+  top: 70vh; /* start showing after first */
+}
+
+.stacked .replacing:nth-child(3) {
+  top: 130vh; /* after second */
+}
+/* Sticky only for medium and larger screens */
+@media (min-width: 768px) {
+  .sticky-col {
+    position: sticky;
+    top: 100px; /* distance from top */
+    align-self: flex-start; /* ensures it sticks to the top of parent row */
+  }
+}
+
+/* Optional: remove sticky on small devices */
+@media (max-width: 767px) {
+  .sticky-col {
+    position: static;
+  }
+}
+@media (min-width: 768px) {
+  .section_backend .sticky-col {
+    position: sticky;
+    top: 100px; /* distance from top */
+    align-self: flex-start; /* ensures it sticks to the top of parent row */
+  }
+}
+
+/* Optional: remove sticky on small devices */
+@media (max-width: 767px) {
+  .section_backend .sticky-col {
+    position: static;
+  }
+}
+.footer-top{
+  color:grey;
+}
+.footer-items:hover{
+  color:grey;
+}
+.left-fadeIn{
+  transform:all 30s ease;
+  animation: lefFadeIn 10s ease forwards;
+}
+@keyframes lefFadeIn{
+  0%{
+    opacity:0;
+    transform:translateX(-100%);
+  }
+  100%{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+.scroll-container {
+  height: 200vh; /* simulate scroll */
+  background: linear-gradient(white, lightgray);
+  padding-top: 100vh;
+}
+ 
+/* define scroll timeline */
+@scroll-timeline scroll-up {
+  source: auto;
+  orientation: block;
+}
+ 
+/* attach animation to timeline */
+.fade-up {
+  animation: fadeUp 1s linear both;
+  animation-timeline: scroll-up;
+  animation-range: entry 0% cover 50%;
+}
+ 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
